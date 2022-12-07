@@ -1,0 +1,308 @@
+{
+	"info": {
+		"_postman_id": "ad93cc0c-eff4-4d44-9a6f-b9cc9dd0d28e",
+		"name": "manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "9720368"
+	},
+	"item": [
+		{
+			"name": "player",
+			"item": [
+				{
+					"name": "getPlayerByPlayerId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": "localhost:8080/player/getPlayerByPlayerId/1"
+					},
+					"response": []
+				},
+				{
+					"name": "getPlayerByPlayerName",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"playerName\" : \"Бориславський Роман\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/player/getPlayerByPlayerName"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllPlayers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/player/getAllPlayers"
+					},
+					"response": []
+				},
+				{
+					"name": "createPlayerWithoutTeamId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"playerName\" : \"Михайло Мудрик\",\r\n    \"age\" : 21,\r\n    \"experience\" : 36\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/player/createPlayerWithoutTeamId"
+					},
+					"response": []
+				},
+				{
+					"name": "createPlayerWithTeamId",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"playerName\" : \"Владислав Кабаєв\",\r\n    \"age\" : 27,\r\n    \"experience\" : 108,\r\n    \"teamId\" : 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/player/createPlayerWithTeamId"
+					},
+					"response": []
+				},
+				{
+					"name": "updatePlayerWithoutTeamId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"playerId\" : 3,\r\n    \"playerName\" : \"Подоляк Роман\",\r\n    \"age\" : 30,\r\n    \"experience\" : 144\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/player/updatePlayerWithoutTeamId"
+					},
+					"response": []
+				},
+				{
+					"name": "updatePlayerWithTeamId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"playerId\" : 4,\r\n    \"playerName\" : \"Сушинець Володимир\",\r\n    \"age\" : 24,\r\n    \"experience\" : 72,\r\n    \"teamId\":1\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/player/updatePlayerWithTeamId"
+					},
+					"response": []
+				},
+				{
+					"name": "deletePlayerByPlayerId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/player/deletePlayerByPlayerId/5"
+					},
+					"response": []
+				},
+				{
+					"name": "deletePlayerByPlayerName",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"playerName\" : \"Ілля Ольховий\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/player/deletePlayerByPlayerName"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "team",
+			"item": [
+				{
+					"name": "getTeamByTeamId",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/team/getTeamByTeamId/1"
+					},
+					"response": []
+				},
+				{
+					"name": "getTeamByTeamName",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teamName\":\"Львів\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/team/getTeamByTeamName"
+					},
+					"response": []
+				},
+				{
+					"name": "getAllTeams",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "localhost:8080/team/getAllTeams"
+					},
+					"response": []
+				},
+				{
+					"name": "createTeam",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teamName\" : \"Шахтар\",\r\n    \"commission\" : 10,\r\n    \"moneyAccount\" : \"3200000\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:8080/team/createTeamWithoutPlayers"
+					},
+					"response": []
+				},
+				{
+					"name": "updateTeam",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teamId\" : 3,\r\n    \"teamName\" : \"Карпати\",\r\n    \"commission\" : 5,\r\n    \"moneyAccount\" : \"920000000\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/team/updateTeamWithoutPlayers"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTeamByTeamId",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "localhost:8080/team/deleteTeamByTeamId/4"
+					},
+					"response": []
+				},
+				{
+					"name": "deleteTeamByTeamName",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"teamName\" : \"Шахтар\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/team/deleteTeamByTeamName"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "transfer",
+			"item": [
+				{
+					"name": "transferPlayerByPlayerIdAndBuyerTeamId",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"playerId\" : 7,\r\n    \"teamId\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/transfer/transferPlayerByPlayerIdAndBuyerTeamId"
+					},
+					"response": []
+				},
+				{
+					"name": "transferPlayerByPlayerNameAndBuyerTeamName",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"playerName\" : \"Тарас Михавко\",\r\n    \"teamName\" : \"Карпати\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "localhost:8080/transfer/transferPlayerByPlayerNameAndBuyerTeamName"
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
